@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mini-dashboard Rick & Morty</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        button {
+            margin-right: 5px;
+        }
+
+        #result{
+            width: 150px;
+            border-radius: 8px;
+        }
+
+        #estado {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .card {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            max-width: 500px;
+        }
+
+        .div1{
+            border-top-left-radius: 2px;
+        }
+
+        .div2{
+            border-top-left-radius: 2px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h2>Mini-dashboard: personajes y episodios</h2>
+
+    <input type="number" id="characterId" placeholder="ID del personaje" min="1">
+    <button id="limpiar">Limpiar Datos</button>
+    <br><br>
+
+    <button id="buscarCallback">Buscar (Callback)</button>
+    <button id="buscarPromesas">Buscar (Promesas)</button>
+    <button id="buscarAsync">Buscar (Async/Await)</button>
+
+    <div class="div1" id="estado"></div>
+    <div class="div2" id="result"></div>
+
+    <script src="App.js"></script>
+</body>
+
+</html>
