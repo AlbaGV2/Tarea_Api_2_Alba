@@ -19,14 +19,29 @@ document.getElementById("buscarCallback").addEventListener("click", buscarCallba
 
 function buscarCallback() {
 
-
-//Se me complica, me parece dificil tambien de entender, los otros mas o menos los entiendo y
-//y con Algo de ayuda los voy haciendo poco a poco pero el callback se me complica.
-
-
-
+    const id = document.getElementById('characterId').value;
+    fetch(`${BASE_URL}/character/${id}`)
+    .then(response => response.json())
+        //si me devuelve datos, llamo a funcion
+        .then(JsonCallback)
+        //Si devuelve algo llamo a la funcion del episodio
+        .then(PrimerEpisodio)
+        //Si no me devuelve nada, me lleva al error
+        .catch(error => {
+            estado.textContent = 'Error en la petición';
+        });
 
 }
+
+function JsonCallback(json) {
+
+    // Meter en constantes cada id para trabajar con ellos
+
+    //Luego añadirle el valor a esas contantes
+
+}
+function PrimerEpisodio(){}
+
 
 
 //Parte 2 - Promise
